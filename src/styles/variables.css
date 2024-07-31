@@ -1,5 +1,7 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --tertiary-color: #28a745;    
+    --primary-color: hsl(248, 45%, 45%);
+    --secondary-color: hsl(241, 66%, 15%);
+    --tertiary-color: hsl(242, 54%, 29%);
+    --quaternary-color: hsl(220, 39%, 40%);
+    --quinary-color:hsl(235, 100%, 3%);
 }
