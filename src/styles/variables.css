@@ -3,6 +3,13 @@
     --secondary-color: hsl(241, 66%, 15%);
     --tertiary-color: hsl(242, 54%, 29%);
     --quaternary-color: hsl(220, 39%, 40%);
-    --quinary-color:hsl(235, 100%, 3%);
+    --quinary-color: hsl(235, 100%, 3%);
     --white-color: hsl(0, 0%, 100%);
+    --bg-color: var(--white-color);
+    --text-color: var(--quinary-color);
+    --header-bg-color: var(--secondary-color);
+    --header-text-color: var(--white-color);
+    --section-bg-color: var(--tertiary-color);
+    --button-bg-color: var(--primary-color);
+    --button-text-color: var(--white-color);
 }

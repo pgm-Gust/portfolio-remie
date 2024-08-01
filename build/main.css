@@ -39,26 +39,44 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* src/styles/variables.css */
+/* src/styles/app.css */
 :root {
-  --primary-color: hsl(248, 45%, 45%);
-  --secondary-color: hsl(241, 66%, 15%);
-  --tertiary-color: hsl(242, 54%, 29%);
-  --quaternary-color: hsl(220, 39%, 40%);
-  --quinary-color:hsl(235, 100%, 3%);
-  --white-color: hsl(0, 0%, 100%);
+  --primary-color: #007bff;
+  --secondary-color: #343a40;
+  --tertiary-color: #6c757d;
+  --quaternary-color: #495057;
+  --quinary-color: #212529;
+  --white-color: #ffffff;
+  --bg-color: var(--white-color);
+  --text-color: var(--quinary-color);
+  --header-bg-color: var(--secondary-color);
+  --header-text-color: var(--white-color);
+  --section-bg-color: var(--tertiary-color);
+  --button-bg-color: var(--primary-color);
+  --button-text-color: var(--white-color);
 }
-
-/* src/styles/components/nav.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: var(--secondary-color);
-  color: var(--white-color);
+  padding: 20px;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.5s;
 }
-.logo {
+header.scrolled {
+  background-color: var(--quaternary-color);
+}
+header .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -73,17 +91,84 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--header-text-color);
   font-size: 1em;
 }
 nav ul li a:hover {
   text-decoration: underline;
 }
-
-/* src/styles/layout/container.css */
-.container {
-  background-color: var(--secondary-color);
-  color: var(--white-color);
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: var(--bg-color);
+  transition: background-color 0.5s, color 0.5s;
 }
-
-/* src/styles/app.css */
+.section:nth-child(even) {
+  background-color: var(--section-bg-color);
+}
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.video-item {
+  margin: 20px;
+}
+video {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid var(--text-color);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form label {
+  margin-top: 10px;
+}
+form input,
+form textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.5s,
+    color 0.5s,
+    border-color 0.5s;
+}
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.5s, color 0.5s;
+}
+form button:hover {
+  background-color: var(--quaternary-color);
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+body.dark-mode {
+  --bg-color: var(--quinary-color);
+  --text-color: var(--white-color);
+  --header-bg-color: var(--tertiary-color);
+  --header-text-color: var(--white-color);
+  --section-bg-color: var(--secondary-color);
+  --button-bg-color: var(--quaternary-color);
+  --button-text-color: var(--white-color);
+}
