@@ -4,4 +4,5 @@
     --tertiary-color: hsl(242, 54%, 29%);
     --quaternary-color: hsl(220, 39%, 40%);
     --quinary-color:hsl(235, 100%, 3%);
+    --white-color: hsl(0, 0%, 100%);
 }
